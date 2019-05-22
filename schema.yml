@@ -1,0 +1,112 @@
+info:
+  description: ''
+  title: ''
+  version: ''
+openapi: 3.0.0
+paths:
+  /snippets/:
+    get:
+      description: "\u6B64\u89C6\u56FE\u81EA\u52A8\u63D0\u4F9B`list`\uFF0C`create`\uFF0C\
+        `retrieve`\uFF0C`update`\u548C`destroy`\u64CD\u4F5C\u3002\n\n\u53E6\u5916\u6211\
+        \u4EEC\u8FD8\u63D0\u4F9B\u4E86\u4E00\u4E2A\u989D\u5916\u7684`highlight`\u64CD\
+        \u4F5C\u3002"
+      operationId: snippets_list
+      tags:
+      - snippets
+    post:
+      description: "\u6B64\u89C6\u56FE\u81EA\u52A8\u63D0\u4F9B`list`\uFF0C`create`\uFF0C\
+        `retrieve`\uFF0C`update`\u548C`destroy`\u64CD\u4F5C\u3002\n\n\u53E6\u5916\u6211\
+        \u4EEC\u8FD8\u63D0\u4F9B\u4E86\u4E00\u4E2A\u989D\u5916\u7684`highlight`\u64CD\
+        \u4F5C\u3002"
+      operationId: snippets_create
+      tags:
+      - snippets
+  /snippets/{id}/:
+    delete:
+      description: "\u6B64\u89C6\u56FE\u81EA\u52A8\u63D0\u4F9B`list`\uFF0C`create`\uFF0C\
+        `retrieve`\uFF0C`update`\u548C`destroy`\u64CD\u4F5C\u3002\n\n\u53E6\u5916\u6211\
+        \u4EEC\u8FD8\u63D0\u4F9B\u4E86\u4E00\u4E2A\u989D\u5916\u7684`highlight`\u64CD\
+        \u4F5C\u3002"
+      operationId: snippets_delete
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this snippet.
+          title: ID
+          type: integer
+      tags:
+      - snippets
+    get:
+      description: "\u6B64\u89C6\u56FE\u81EA\u52A8\u63D0\u4F9B`list`\uFF0C`create`\uFF0C\
+        `retrieve`\uFF0C`update`\u548C`destroy`\u64CD\u4F5C\u3002\n\n\u53E6\u5916\u6211\
+        \u4EEC\u8FD8\u63D0\u4F9B\u4E86\u4E00\u4E2A\u989D\u5916\u7684`highlight`\u64CD\
+        \u4F5C\u3002"
+      operationId: snippets_read
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this snippet.
+          title: ID
+          type: integer
+      tags:
+      - snippets
+    patch:
+      description: "\u6B64\u89C6\u56FE\u81EA\u52A8\u63D0\u4F9B`list`\uFF0C`create`\uFF0C\
+        `retrieve`\uFF0C`update`\u548C`destroy`\u64CD\u4F5C\u3002\n\n\u53E6\u5916\u6211\
+        \u4EEC\u8FD8\u63D0\u4F9B\u4E86\u4E00\u4E2A\u989D\u5916\u7684`highlight`\u64CD\
+        \u4F5C\u3002"
+      operationId: snippets_partial_update
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this snippet.
+          title: ID
+          type: integer
+      tags:
+      - snippets
+    put:
+      description: "\u6B64\u89C6\u56FE\u81EA\u52A8\u63D0\u4F9B`list`\uFF0C`create`\uFF0C\
+        `retrieve`\uFF0C`update`\u548C`destroy`\u64CD\u4F5C\u3002\n\n\u53E6\u5916\u6211\
+        \u4EEC\u8FD8\u63D0\u4F9B\u4E86\u4E00\u4E2A\u989D\u5916\u7684`highlight`\u64CD\
+        \u4F5C\u3002"
+      operationId: snippets_update
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this snippet.
+          title: ID
+          type: integer
+      tags:
+      - snippets
+  /users/:
+    get:
+      description: "\u6B64\u89C6\u56FE\u81EA\u52A8\u63D0\u4F9B'list'\u548C'detail'\u64CD\
+        \u4F5C"
+      operationId: users_list
+      tags:
+      - users
+  /users/{id}/:
+    get:
+      description: "\u6B64\u89C6\u56FE\u81EA\u52A8\u63D0\u4F9B'list'\u548C'detail'\u64CD\
+        \u4F5C"
+      operationId: users_read
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          description: A unique integer value identifying this user.
+          title: ID
+          type: integer
+      tags:
+      - users
+servers:
+- url: ''

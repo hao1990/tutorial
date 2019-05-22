@@ -18,14 +18,23 @@ from django.urls import path
 from django.conf.urls import url, include
 from rest_framework import routers
 from quickstart import views
+from rest_framework.schemas import get_schema_view
 
 # router = routers.DefaultRouter()
 # router.register(r'users',views.UserViewSet)
 # router.register(r'groups', views.GroupViewSet)
+
+API_TITLE = 'Pastebin API'
+API_DESCRIPTION = 'A Web API for creating and viewing highlighted code snippets.'
+
+schema_view = get_schema_view(title=API_TITLE)
+
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
     # url(r'^',include(router.urls)),
     # url(r'^api-auth/',include('rest_framework.urls', namespace='rest_form')),
     url(r'^', include('snippets.urls')),
+    url('^schema/$', schema_view),
+
 ]
